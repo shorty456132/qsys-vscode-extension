@@ -4,8 +4,8 @@
         "body": [
             "table.insert(ctrls, {",
             "Name = \"$1\",",
-            "Count = $3, ",
-            "ControlType = \"${2|Indicator, Knob, Button, Text|}\",",
+            "Count = ${2:1}, ",
+            "ControlType = \"${3|Indicator, Knob, Button, Text|}\",",
             "})"
         ]
     },
