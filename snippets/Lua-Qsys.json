@@ -1,0 +1,72 @@
+{
+    "Auto Populate Controls": {
+        "prefix": "ctrls, controls",
+        "body": [
+            "table.insert(ctrls, {",
+            "Name = \"$1\",",
+            "Count = $3, ",
+            "ControlType = \"${2|Indicator, Knob, Button, Text|}\",",
+            "})"
+        ]
+    },
+    "Auto Populate Graphics": {
+        "prefix": "graphics",
+        "body": [
+            "table.insert(graphics, {",
+            "\tType = \"${1|Text,GroupBox,Header|}\",",
+            "\tText = \"$2\",",
+            "\tSize = {$3,$4},",
+            "\tPosition = {$5,$6},",
+            "})$0"
+        ],
+        "description": "Auto-populate graphics code block"
+    },
+    "Auto Populate layouts": {
+        "prefix": "layout",
+        "body": [
+            "layout[\"$1\"] = {",
+            "PrettyName = \"$2\",",
+            "Style = \"${3|Button,Indicator,Text,Fader|}\",",
+            "Position = {$4,$5},",
+            "Size = {$6, $7}",
+            "}$0"
+        ]
+    },
+    "Properties": {
+        "prefix": "props, properties",
+        "body": [
+            "table.insert(props, {",
+            "Name = \"$1\",",
+            "Type = \"${2|boolean, integer, enum|}\",",
+            "})$0"
+        ]
+    },
+    "Auto Complete HTextAlign": {
+        "prefix": "HTextAlign",
+        "body": "HTextAlign = \"${1|Left,Center,Right|}\",$0"
+    },
+    "Position": {
+        "prefix": "Position",
+        "body": "Position = {${1:w}, ${2:h}},$0"
+    },
+    "Size": {
+        "prefix": "Size",
+        "body": "Size = {${1:x}, ${2:y}},$0"
+    },
+    "ButtonType": {
+        "prefix": "ButtonType",
+        "body": "ButtonType = \"${1|Momentary, Toggle, Trigger|}\",$0"
+    },
+    "IndicatorType": {
+        "prefix": "IndicatorType",
+        "body": "IndicatorType = \"${1|LED, Meter, Text, Status|},$0"
+    },
+    "userPin": {
+        "prefix": "UserPin",
+        "body": "UserPin = ${4|true, false|},$0"
+    },
+    "PinStyle": {
+        "prefix": "PinStyle",
+        "body": "PinStyle = \"${1|Input, Output, Both|}\","
+    }
+}
