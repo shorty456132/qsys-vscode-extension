@@ -8,6 +8,10 @@
     "vscode": "^1.0.0"
   },
   "categories": ["Snippets"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shorty456132/qsys-vscode-extension.git"
+  },
   "contributes": {
     "snippets": [
       {
