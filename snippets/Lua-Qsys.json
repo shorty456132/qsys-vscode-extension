@@ -5,7 +5,7 @@
             "table.insert(ctrls, {",
             "Name = \"$1\",",
             "Count = ${2:1}, ",
-            "ControlType = \"${3|Indicator, Knob, Button, Text|}\",",
+            "ControlType = \"${3|Indicator, Knob, Button, Text|}\",$0",
             "})"
         ]
     },
@@ -16,8 +16,8 @@
             "\tType = \"${1|Text,GroupBox,Header|}\",",
             "\tText = \"$2\",",
             "\tSize = {$3,$4},",
-            "\tPosition = {$5,$6},",
-            "})$0"
+            "\tPosition = {$5,$6},$0",
+            "})"
         ],
         "description": "Auto-populate graphics code block"
     },
@@ -28,8 +28,8 @@
             "PrettyName = \"$2\",",
             "Style = \"${3|Button,Indicator,Text,Fader|}\",",
             "Position = {$4,$5},",
-            "Size = {$6, $7}",
-            "}$0"
+            "Size = {$6, $7},$0",
+            "}"
         ]
     },
     "Properties": {
@@ -37,8 +37,8 @@
         "body": [
             "table.insert(props, {",
             "Name = \"$1\",",
-            "Type = \"${2|boolean, integer, enum|}\",",
-            "})$0"
+            "Type = \"${2|boolean, integer, enum|}\",$0",
+            "})"
         ]
     },
     "Auto Complete HTextAlign": {
@@ -67,6 +67,6 @@
     },
     "PinStyle": {
         "prefix": "PinStyle",
-        "body": "PinStyle = \"${1|Input, Output, Both|}\","
+        "body": "PinStyle = \"${1|Input, Output, Both|}\",%0"
     }
 }
