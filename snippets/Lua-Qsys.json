@@ -24,7 +24,7 @@
     "Auto Populate layouts": {
         "prefix": "layout",
         "body": [
-            "layout[\"$1\"] = {",
+            "layout[\"${1:ControlName}\"] = {",
             "PrettyName = \"$2\",",
             "Style = \"${3|Button,Indicator,Text,Fader|}\",",
             "Position = {$4,$5},",
