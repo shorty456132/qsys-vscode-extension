@@ -1,13 +1,14 @@
 # qsys-vscode-extension
-extension for VS Code that incorporates intellisense for qsys plugin creation
+extension for VS Code that incorporates intellisense for qsys plugin creation.
 
 meant to be used with the q-sys basic plugin framework
 
 some snippets can be inserted by keywords. 
 
-keywords currently incorporated:
 
-
+# V 0.0.1
+just begining stages. this is open to the public if anyone wants to add or modify anything. 
+## keywords currently incorporated:
 ## code blocks
 tab through each entry for quicker coding. if a key has a choice of values, intellisense will show all optional values
 ### ctrl or controls<br>
