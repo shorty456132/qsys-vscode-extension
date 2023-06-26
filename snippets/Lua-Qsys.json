@@ -21,6 +21,20 @@
         ],
         "description": "Auto-populate graphics code block"
     },
+    "Groupbox": {
+        "prefix": "GroupBox",
+        "body": [
+            "table.insert(graphics, {",
+            "\tType = \"GroupBox\",",
+            "\tText = \"$2\",",
+            "\tSize = {$3,$4},",
+            "\tPosition = {$5,$6},",
+            "\tCornerRadius = $7,",
+            "\tFill = \"$8\"$0",
+            "})"
+        ],
+        "description": "Auto-populate graphics code block"
+    },
     "Auto Populate layouts": {
         "prefix": "layout",
         "body": [
