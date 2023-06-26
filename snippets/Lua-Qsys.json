@@ -82,5 +82,9 @@
     "PinStyle": {
         "prefix": "PinStyle",
         "body": "PinStyle = \"${1|Input, Output, Both|}\",%0"
+    },
+    "Fill": {
+        "prefix": "Fill",
+        "body": "Fill = {$1,$2,$3}$0"
     }
 }
