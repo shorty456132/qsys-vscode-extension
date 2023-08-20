@@ -2,7 +2,7 @@
   "name": "lua-for-qsys",
   "displayName": "Lua for Q-SYS Plugins",
   "description": "VSCode extension for auto-populating graphics code blocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "shorty456132",
   "engines": {
     "vscode": "^1.0.0"

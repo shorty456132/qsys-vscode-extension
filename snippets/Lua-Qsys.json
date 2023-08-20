@@ -4,8 +4,10 @@
         "body": [
             "table.insert(ctrls, {",
             "Name = \"$1\",",
-            "Count = ${2:1}, ",
-            "ControlType = \"${3|Indicator, Knob, Button, Text|}\",$0",
+            "Count = ${2:1},",
+            "ControlType = \"${3|Indicator,Knob,Button,Text|}\"",
+            "UserPin = \"${4|True,False|}\"",
+            "PinStyle = \"${5|Input,Output,Both\",$0",
             "})"
         ]
     },
@@ -40,7 +42,7 @@
         "body": [
             "layout[\"${1:ControlName}\"] = {",
             "PrettyName = \"$2\",",
-            "Style = \"${3|Button,Indicator,Text,Fader|}\",",
+            "Style = \"${3|Button,Indicator,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
             "Position = {$4,$5},",
             "Size = {$6, $7},$0",
             "}"
@@ -51,7 +53,7 @@
         "body": [
             "table.insert(props, {",
             "Name = \"$1\",",
-            "Type = \"${2|boolean, integer, enum|}\",$0",
+            "Type = \"${2|boolean,integer,enum|}\",$0",
             "})"
         ]
     },
@@ -69,19 +71,19 @@
     },
     "ButtonType": {
         "prefix": "ButtonType",
-        "body": "ButtonType = \"${1|Momentary, Toggle, Trigger|}\",$0"
+        "body": "ButtonType = \"${1|Momentary,Toggle,Trigger|}\",$0"
     },
     "IndicatorType": {
         "prefix": "IndicatorType",
-        "body": "IndicatorType = \"${1|LED, Meter, Text, Status|},$0"
+        "body": "IndicatorType = \"${1|LED,Meter,Text,Status|},$0"
     },
     "userPin": {
         "prefix": "UserPin",
-        "body": "UserPin = ${4|true, false|},$0"
+        "body": "UserPin = ${4|true,false|},$0"
     },
     "PinStyle": {
         "prefix": "PinStyle",
-        "body": "PinStyle = \"${1|Input, Output, Both|}\",%0"
+        "body": "PinStyle = \"${1|Input,Output,Both|}\",%0"
     },
     "Fill": {
         "prefix": "Fill",
