@@ -6,7 +6,7 @@
             "Name = \"$1\",",
             "Count = ${2:1},",
             "ControlType = \"${3|Indicator,Knob,Button,Text|}\",",
-            "UserPin = \"${4|True,False|}\",",
+            "UserPin = ${4|true,false|},",
             "PinStyle = \"${5|Input,Output,Both|}\",$0",
             "})"
         ]
