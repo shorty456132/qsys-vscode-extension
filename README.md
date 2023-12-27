@@ -6,10 +6,10 @@ meant to be used with the q-sys basic plugin framework
 some snippets can be inserted by keywords. 
 
 <details>
-  <summary># V 1.0.1</summary>
-
+ <summary><b>Version 1.0.1</b></summary>
   - bug fixes mainly.
 </details>
+
 # V 0.0.1
 just begining stages. this is open to the public if anyone wants to add or modify anything. 
 ## keywords currently incorporated:
