@@ -75,7 +75,7 @@
     },
     "IndicatorType": {
         "prefix": "IndicatorType",
-        "body": "IndicatorType = \"${1|LED,Meter,Text,Status|},$0"
+        "body": "IndicatorType = \"${1|LED,Meter,Text,Status|}\",$0"
     },
     "userPin": {
         "prefix": "UserPin",
