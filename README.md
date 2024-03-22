@@ -12,7 +12,14 @@
 This extension is designed to be intuitive for users familiar with Q-SYS and VS Code. Simply type in the provided keywords to trigger IntelliSense and insert code blocks.
 
 ### Installation
-Install the extension directly from the Visual Studio Code Marketplace.
+Until I get it approved on the vscode market you will have to:
+- download the .vsix file
+- Open VScode
+- navigate to the extentions tab
+- click on the 3 dots above the search bar
+- in the dropdown menu choose "install from vsix"
+
+~~Install the extension directly from the Visual Studio Code Marketplace.~~
 
 ## Snippets and Keywords
 The extension includes several snippets that can be accessed using specific keywords:
