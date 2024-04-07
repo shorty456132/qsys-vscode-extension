@@ -30,22 +30,27 @@ tab through each entry for quicker coding. if a key has a choice of values, inte
 `ctrl` or `controls`<br>
 Will build out the controls code block. more properties can be added once you tab through the base properties.
 ```
-  table.insert(ctrls, {
+table.insert(ctrls, {
     Name = "",
     Count = 1,
     ControlType = "Button | Indicator | Knob | Text"
   })
 ```
+
 ### Properties
 `prop` or `properties`
 will biuld out the table insersion for properties and add properties that are used the most.
 ```
-table.insert(graphics, {
-    Type = 
-    Image = 
-    Position = 
-    Size = 
-  })
+table.insert( props, {
+      Name = "Count",
+      Type = "integer",
+      Value = 8,
+      Min = 2,
+      Max = 64,
+      Comment = "Range: 2-64",
+      Header = "Channels"
+    }
+  )
 ```
 
 ### Graphics
