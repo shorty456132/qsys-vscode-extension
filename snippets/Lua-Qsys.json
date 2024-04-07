@@ -27,10 +27,11 @@
         "prefix": "graphics",
         "body": [
             "table.insert(graphics, {",
-            "\tType = \"${1|Text,GroupBox,Header|}\",",
+            "\tType = \"${1|Label, GroupBox, Header, Image, SVG|}\",",
             "\tText = \"$2\",",
             "\tSize = {$3,$4},",
             "\tPosition = {$5,$6},$0",
+            "\t-- ZOrder = $0,",
             "})"
         ],
         "description": "Auto-populate graphics code block"
@@ -54,18 +55,20 @@
         "body": [
             "layout[\"${1:ControlName}\"] = {",
             "PrettyName = \"$2\",",
-            "Style = \"${3|Button,Indicator,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
+            "Style = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
             "Position = {$4,$5},",
             "Size = {$6, $7},$0",
             "}"
         ]
     },
-    "Properties": {
+    "Auto Populate Properties": {
         "prefix": "props, properties",
         "body": [
             "table.insert(props, {",
             "Name = \"$1\",",
-            "Type = \"${2|boolean,integer,enum|}\",$0",
+            "Type = \"${2|boolean,integer,enum|}\",",
+            "Comment = \"$3\",",
+            "Header = \"$4\",$0",
             "})"
         ]
     },
@@ -83,7 +86,7 @@
     },
     "ButtonType": {
         "prefix": "ButtonType",
-        "body": "ButtonType = \"${1|Momentary,Toggle,Trigger|}\",$0"
+        "body": "ButtonType = \"${1|Momentary,Toggle,Trigger, On, Off, Custom, StateTrigger|}\",$0"
     },
     "IndicatorType": {
         "prefix": "IndicatorType",
@@ -108,5 +111,7 @@
     "Header":{
         "prefix": "Header",
         "body": "Header = \"$1\",%0"
-    }
+    },
+    "TextBoxStyle": "TextBox, TextBoxStyle",
+        "body": "TextBoxStyle = \"${1|Normal, Meter, NoBackground|}\",$0"
 }
