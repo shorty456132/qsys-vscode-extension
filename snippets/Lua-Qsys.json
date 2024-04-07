@@ -11,6 +11,18 @@
             "})"
         ]
     },
+    "Auto Populate Component": {
+        "prefix": "component",
+        "body": [
+            "table.insert(component, {",
+            "Name = \"$1\",",
+            "Count = ${2:1},",
+            "ControlType = \"${3|Indicator,Knob,Button,Text|}\",",
+            "UserPin = ${4|true,false|},",
+            "PinStyle = \"${5|Input,Output,Both|}\",$0",
+            "})"
+        ]
+    },
     "Auto Populate Graphics": {
         "prefix": "graphics",
         "body": [
@@ -83,10 +95,18 @@
     },
     "PinStyle": {
         "prefix": "PinStyle",
-        "body": "PinStyle = \"${1|Input,Output,Both|}\",%0"
+        "body": "PinStyle = \"${1|Input,Output,Both|}\",$0"
     },
     "Fill": {
         "prefix": "Fill",
-        "body": "Fill = {$1,$2,$3}$0"
+        "body": "Fill = {$1,$2,$3},$0"
+    },
+    "Comment": {
+        "prefix": "Comment",
+        "body": "Comment = \"$1\",$0"
+    },
+    "Header":{
+        "prefix": "Header",
+        "body": "Header = \"$1\",%0"
     }
 }
