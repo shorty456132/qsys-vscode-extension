@@ -33,7 +33,9 @@ Will build out the controls code block. more properties can be added once you ta
 table.insert(ctrls, {
     Name = "",
     Count = 1,
-    ControlType = "Button | Indicator | Knob | Text"
+    ControlType = "Button | Indicator | Knob | Text",
+    UserPin = true | false,
+    PinStyle = "Input" | "Output" | "Both"
   })
 ```
 
