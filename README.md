@@ -13,16 +13,6 @@ This extension is designed to be intuitive for users familiar with Q-SYS and VS 
 ### Installation
 Install the extension directly from the Visual Studio Code Marketplace.
 
-<details>
- <summary><b>Version 1.1.0</b></summary>
-  - Added Comment and Header for optional strings on properties
-  - Added ButtonType  On, Off , Custom, StateTrigger
-  - Added TextBoxStyle Normal, Meter, NoBackground
-  - Added more values to the graphics table
-  - bug fixes
-</details>
-
-
 # keywords currently incorporated:
 ## code blocks
 tab through each entry for quicker coding. if a key has a choice of values, intellisense will show all optional values
@@ -34,8 +24,8 @@ table.insert(ctrls, {
     Name = "",
     Count = 1,
     ControlType = "Button | Indicator | Knob | Text",
-    UserPin = true | false,
-    PinStyle = "Input" | "Output" | "Both"
+    UserPIn = true | false,
+    PinStyle = "Input | Output | Both | None"
   })
 ```
 
@@ -55,15 +45,26 @@ table.insert( props, {
   )
 ```
 
+### Component
+`components`
+Will populate the basic must haves for component creation
+```
+table.insert(components, {
+  Name = "",
+  Type = "",
+  Properties = {}
+})
+```
+
 ### Graphics
 `graphics`
 will add to the controlLayouts table
 ```
 table.insert(graphics, {
     Type = Label | GroupBox | Header | Image | SVG
-    Image = 
-    Position = 
-    Size = 
+    Image = "",
+    Position = {,},
+    Size = {,},
   })
 ```
 
@@ -79,20 +80,53 @@ layout["<control name>"] = {
   }
 ```
 
+### GroupBox
+`GroupBox`
+Will populate the GroupBox table
+```
+table.insert(graphics, {
+  Type = GroupBox,
+  Text = "",
+  HTextAlign = "Center | Left | Right",
+  Size = {x,y},
+  Position = {x,y},
+  CornerRadius = integer
+})
+```
+
 ## Individual Keywords
 - HTextAlign      - Left | Center | Right
 - Position        - x | y
 - Size            - x | y
 - ButtonType      - Momentary | Toggle |Trigger | On | Off | Custom | StateTrigger
+- ButtonStyle     - Toggle | Momentary | Trigger | On | Off | Custom
+- ButtonVisualStyle - Flat | Gloss
 - IndicatorType   - Led | Meter | Text | Status
 - UserPin         - true | false
 - PinStyle        - Input | Output | Both | None
+- MeterStyle      - Level | Reduction | Gain | Standard
+- ControlUnit     - dB | Hz | Float | Integer | Pan | Percent | Position | Seconds
 - Comment         - String (v9.10)
 - Header          - String (v9.10)
-- TextBoxStyle    - TextBoxStyle Normal | Meter | NoBackground
+- TextBoxStyle    - Normal | Meter | NoBackground
 
+## Version History
+<details>
+ <summary><b>Version 1.1.0</b></summary>
+  - Added Comment and Header for optional strings on properties
+  - Added ButtonType  On, Off , Custom, StateTrigger
+  - Added TextBoxStyle Normal, Meter, NoBackground
+  - Added more values to the graphics table
+  - bug fixes
+</details>
+<br>
 
-
+<details>
+ <summary><b>Version 1.2.0</b></summary>
+ - Lots of bug fixes
+ - Adding more options for properties that came out with 9.10
+ - Adding more keywords
+</details>
 
 ## Contributing
 This project is open to public contributions. Feel free to add new features, improve existing ones, or suggest changes. Your input is valuable in making this tool more effective for everyone.
