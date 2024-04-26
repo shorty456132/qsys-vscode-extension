@@ -3,11 +3,11 @@
         "prefix": "ctrls, controls",
         "body": [
             "table.insert(ctrls, {",
-            "Name = \"$1\",",
-            "Count = ${2:1},",
-            "ControlType = \"${3|Indicator,Knob,Button,Text|}\",",
-            "UserPin = ${4|true,false|},",
-            "PinStyle = \"${5|Input,Output,Both|}\",$0",
+            "\tName = \"$1\",",
+            "\tCount = ${2:1},",
+            "\tControlType = \"${3|Indicator,Knob,Button,Text|}\",",
+            "\tUserPin = ${4|true,false|},",
+            "\tPinStyle = \"${5|Input,Output,Both,None|}\",$0",
             "})"
         ]
     },
@@ -15,11 +15,9 @@
         "prefix": "component",
         "body": [
             "table.insert(component, {",
-            "Name = \"$1\",",
-            "Count = ${2:1},",
-            "ControlType = \"${3|Indicator,Knob,Button,Text|}\",",
-            "UserPin = ${4|true,false|},",
-            "PinStyle = \"${5|Input,Output,Both|}\",$0",
+            "\tName = \"$1\",",
+            "\tType = \"$2\",",
+            "\tProperties = {$3}$0",
             "})"
         ]
     },
@@ -27,37 +25,36 @@
         "prefix": "graphics",
         "body": [
             "table.insert(graphics, {",
-            "\tType = \"${1|Label, GroupBox, Header, Image, SVG|}\",",
-            "\tText = \"$2\",",
-            "\tSize = {$3,$4},",
-            "\tPosition = {$5,$6},$0",
-            "\t-- ZOrder = $0,",
+            "\tType     = \"${1|Label,GroupBox,Header,Image,SVG|}\",",
+            "\tText     = \"$2\",",
+            "\tSize     = {$3:x,$4:y},",
+            "\tPosition = {$5:x,$6:y},$0",
             "})"
         ],
         "description": "Auto-populate graphics code block"
     },
-    "Groupbox": {
+    "Auto Populate Groupbox": {
         "prefix": "GroupBox",
         "body": [
             "table.insert(graphics, {",
             "\tType = \"GroupBox\",",
             "\tText = \"$2\",",
-            "\tSize = {$3,$4},",
-            "\tPosition = {$5,$6},",
-            "\tCornerRadius = $7,",
-            "\tFill = \"$8\"$0",
+            "\tHTextAlign = \"$3{|Center,Left,Right|}\",",
+            "\tSize = {$4,$5},",
+            "\tPosition = {$6:x,$7:y},",
+            "\tCornerRadius = $8,$0",
             "})"
         ],
-        "description": "Auto-populate graphics code block"
+        "description": "Auto-populate graphics code block \nText - String\nFont - String\nFontSize - Integer\nFontStyle - FontStyle\nHTextAlign - String\nStrokeWidth - Integer 0-64\nStrokeColor - Table {r,g,b,a} or String\nTextColor - Table\nFill - Table"
     },
     "Auto Populate layouts": {
         "prefix": "layout",
         "body": [
-            "layout[\"${1:ControlName}\"] = {",
-            "PrettyName = \"$2\",",
-            "Style = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
-            "Position = {$4,$5},",
-            "Size = {$6, $7},$0",
+            "\tlayout[\"${1:ControlName}\"] = {",
+            "\tPrettyName = \"$2\",",
+            "\tStyle = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
+            "\tPosition = {$4:x,$5:y},",
+            "\tSize = {$6:x, $7:y},$0",
             "}"
         ]
     },
@@ -65,10 +62,10 @@
         "prefix": "props, properties",
         "body": [
             "table.insert(props, {",
-            "Name = \"$1\",",
-            "Type = \"${2|boolean,integer,enum|}\",",
-            "Comment = \"$3\",",
-            "Header = \"$4\",$0",
+            "\tName = \"$1\",",
+            "\tType = \"${2|boolean,double,enum,integer,strin|}\",",
+            "\tComment = \"$3\",",
+            "\tHeader = \"$4\",$0",
             "})"
         ]
     },
@@ -86,7 +83,15 @@
     },
     "ButtonType": {
         "prefix": "ButtonType",
-        "body": "ButtonType = \"${1|Momentary,Toggle,Trigger, On, Off, Custom, StateTrigger|}\",$0"
+        "body": "ButtonType = \"${1|Momentary,Toggle,Trigger,On,Off,Custom,StateTrigger|}\",$0"
+    },
+    "ButtonStyle": {
+        "prefix": "ButtonStyle",
+        "body": "ButtonStyle = \"{1|Toggle,Momentary,Trigger,On,Off,Custom|}\",$0"
+    },
+    "ButtonVisualStyle": {
+        "prefix": "ButtonVisual, ButtonVisualStyle",
+        "body": "ButtonVisualStyle = \"${1|Flat,Gloss,|}\","
     },
     "IndicatorType": {
         "prefix": "IndicatorType",
@@ -104,6 +109,14 @@
         "prefix": "Fill",
         "body": "Fill = {$1,$2,$3},$0"
     },
+    "MeterStyle": {
+        "prefix": "MeterStyle",
+        "body": "MeterStyle = \"${1|Level,Reduction,Gain,Standard|\",$0"
+    },
+    "ControlUnit": {
+        "prefix": "ControlUnit",
+        "body": "ControlUnit = \"${$1|dB,Hz,Float,Integer,Pan,Percent,Position,Seconds|}\","
+    },
     "Comment": {
         "prefix": "Comment",
         "body": "Comment = \"$1\",$0"
@@ -112,6 +125,8 @@
         "prefix": "Header",
         "body": "Header = \"$1\",%0"
     },
-    "TextBoxStyle": "TextBox, TextBoxStyle",
+    "TextBoxStyle": {
+        "prefix": "TextBox, TextBoxStyle",
         "body": "TextBoxStyle = \"${1|Normal, Meter, NoBackground|}\",$0"
+    }
 }
