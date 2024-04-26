@@ -12,9 +12,9 @@
         ]
     },
     "Auto Populate Component": {
-        "prefix": "component",
+        "prefix": "component, components",
         "body": [
-            "table.insert(component, {",
+            "table.insert(components, {",
             "\tName = \"$1\",",
             "\tType = \"$2\",",
             "\tProperties = {$3}$0",
@@ -63,7 +63,7 @@
         "body": [
             "table.insert(props, {",
             "\tName = \"$1\",",
-            "\tType = \"${2|boolean,double,enum,integer,strin|}\",",
+            "\tType = \"${2|boolean,double,enum,integer,string|}\",",
             "\tComment = \"$3\",",
             "\tHeader = \"$4\",$0",
             "})"
