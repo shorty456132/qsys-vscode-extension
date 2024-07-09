@@ -59,7 +59,7 @@ table.insert(components, {
 ### Graphics
 `graphics`
 will add to the controlLayouts table
-```
+``` 
 table.insert(graphics, {
     Type = Label | GroupBox | Header | Image | SVG
     Image = "",
@@ -77,8 +77,8 @@ layout["<control name>"] = {
   Style = "Button | Text | Fader | Knob | Meter | Led | ListBox | ComboBox | None",
   Position = {X, Y},
   Size = {X, Y}
-  }
-```
+  } 
+  ```
 
 ### GroupBox
 `GroupBox`
@@ -113,6 +113,7 @@ table.insert(graphics, {
 ## Version History
 <details>
  <summary><b>Version 1.1.0</b></summary>
+
   - Added Comment and Header for optional strings on properties
   - Added ButtonType  On, Off , Custom, StateTrigger
   - Added TextBoxStyle Normal, Meter, NoBackground
@@ -123,11 +124,23 @@ table.insert(graphics, {
 
 <details>
  <summary><b>Version 1.2.0</b></summary>
+
  - Lots of bug fixes
  - Adding more options for properties that came out with 9.10
  - Adding more keywords
 </details>
 
+<details>
+ <summary><b>Version 1.2.1</b></summary>
+
+  - fixing x, y placeholders on position and size values
+</details>
+
+<details>
+ <summary><b>Version 1.2.2</b></summary>
+
+  - missed x, y placeholders on position and size values for the layout snippet
+</details>
 ## Contributing
 This project is open to public contributions. Feel free to add new features, improve existing ones, or suggest changes. Your input is valuable in making this tool more effective for everyone.
 

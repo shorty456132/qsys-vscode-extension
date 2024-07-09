@@ -27,8 +27,8 @@
             "table.insert(graphics, {",
             "\tType     = \"${1|Label,GroupBox,Header,Image,SVG|}\",",
             "\tText     = \"$2\",",
-            "\tSize     = {$3:x,$4:y},",
-            "\tPosition = {$5:x,$6:y},$0",
+            "\tSize     = {${3:x}, ${4:y}},",
+            "\tPosition = {${5:x}, ${6:y}},$0",
             "})"
         ],
         "description": "Auto-populate graphics code block"
@@ -41,7 +41,7 @@
             "\tText = \"$2\",",
             "\tHTextAlign = \"$3{|Center,Left,Right|}\",",
             "\tSize = {$4,$5},",
-            "\tPosition = {$6:x,$7:y},",
+            "\tPosition = {${6:x}, ${7:y}},",
             "\tCornerRadius = $8,$0",
             "})"
         ],
@@ -53,8 +53,8 @@
             "\tlayout[\"${1:ControlName}\"] = {",
             "\tPrettyName = \"$2\",",
             "\tStyle = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
-            "\tPosition = {$4:x,$5:y},",
-            "\tSize = {$6:x, $7:y},$0",
+            "\tPosition = {${4:x}, {$5:y}},",
+            "\tSize = {${6:x}, ${7:y}},$0",
             "}"
         ]
     },
