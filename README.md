@@ -120,7 +120,6 @@ table.insert(graphics, {
   - Added more values to the graphics table
   - bug fixes
 </details>
-<br>
 
 <details>
  <summary><b>Version 1.2.0</b></summary>
@@ -131,16 +130,11 @@ table.insert(graphics, {
 </details>
 
 <details>
- <summary><b>Version 1.2.1</b></summary>
+ <summary><b>Version 1.2.3</b></summary>
 
-  - fixing x, y placeholders on position and size values
+   - fixing x, y placeholders on position and size values
 </details>
 
-<details>
- <summary><b>Version 1.2.2</b></summary>
-
-  - missed x, y placeholders on position and size values for the layout snippet
-</details>
 ## Contributing
 This project is open to public contributions. Feel free to add new features, improve existing ones, or suggest changes. Your input is valuable in making this tool more effective for everyone.
 

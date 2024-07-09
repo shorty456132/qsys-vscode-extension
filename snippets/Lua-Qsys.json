@@ -53,7 +53,7 @@
             "\tlayout[\"${1:ControlName}\"] = {",
             "\tPrettyName = \"$2\",",
             "\tStyle = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
-            "\tPosition = {${4:x}, {$5:y}},",
+            "\tPosition = {${4:x}, ${5:y}},",
             "\tSize = {${6:x}, ${7:y}},$0",
             "}"
         ]
