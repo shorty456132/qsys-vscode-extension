@@ -135,6 +135,12 @@ table.insert(graphics, {
    - fixing x, y placeholders on position and size values
 </details>
 
+<details>
+ <summary><b>Version 1.2.4</b></summary>
+
+   - ControlUnit: Removing $ within the curly brackets. Fixes issue with snippet not populating correctly.
+</details>
+
 ## Contributing
 This project is open to public contributions. Feel free to add new features, improve existing ones, or suggest changes. Your input is valuable in making this tool more effective for everyone.
 

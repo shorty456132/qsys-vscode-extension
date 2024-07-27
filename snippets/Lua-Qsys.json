@@ -115,7 +115,7 @@
     },
     "ControlUnit": {
         "prefix": "ControlUnit",
-        "body": "ControlUnit = \"${$1|dB,Hz,Float,Integer,Pan,Percent,Position,Seconds|}\","
+        "body": "ControlUnit = \"${1|dB,Hz,Float,Integer,Pan,Percent,Position,Seconds|}\","
     },
     "Comment": {
         "prefix": "Comment",
