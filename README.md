@@ -141,6 +141,13 @@ table.insert(graphics, {
    - ControlUnit: Removing $ within the curly brackets. Fixes issue with snippet not populating correctly.
 </details>
 
+<details>
+ <summary><b>Version 1.2.5</b></summary>
+
+   - Removing tab indent for Layout
+   - Fixing formatting for ButtonStyle
+</details>
+
 ## Contributing
 This project is open to public contributions. Feel free to add new features, improve existing ones, or suggest changes. Your input is valuable in making this tool more effective for everyone.
 

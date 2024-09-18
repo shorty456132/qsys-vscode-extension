@@ -50,7 +50,7 @@
     "Auto Populate layouts": {
         "prefix": "layout",
         "body": [
-            "\tlayout[\"${1:ControlName}\"] = {",
+            "layout[\"${1:ControlName}\"] = {",
             "\tPrettyName = \"$2\",",
             "\tStyle = \"${3|Button,Text,Fader,Knob,Meter,Led,ListBox,ComboBox,None|}\",",
             "\tPosition = {${4:x}, ${5:y}},",
@@ -87,7 +87,7 @@
     },
     "ButtonStyle": {
         "prefix": "ButtonStyle",
-        "body": "ButtonStyle = \"{1|Toggle,Momentary,Trigger,On,Off,Custom|}\",$0"
+        "body": "ButtonStyle = \"${1|Toggle,Momentary,Trigger,On,Off,Custom|}\",$0"
     },
     "ButtonVisualStyle": {
         "prefix": "ButtonVisual, ButtonVisualStyle",
