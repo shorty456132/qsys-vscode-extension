@@ -123,7 +123,7 @@
     },
     "Header":{
         "prefix": "Header",
-        "body": "Header = \"$1\",%0"
+        "body": "Header = \"$1\",$0"
     },
     "TextBoxStyle": {
         "prefix": "TextBox, TextBoxStyle",
