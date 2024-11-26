@@ -10,12 +10,16 @@ qsys-vscode-extension is an extension for Visual Studio Code designed specifical
 ## Getting Started
 This extension is designed to be intuitive for users familiar with Q-SYS and VS Code. Simply type in the provided keywords to trigger IntelliSense and insert code blocks.
 
+## Notes
+I find it best to disable or sleep any code completion agents while building out the controls, properties, and layout
+
 ### Installation
 Install the extension directly from the Visual Studio Code Marketplace.
 
 # keywords currently incorporated:
 ## code blocks
 tab through each entry for quicker coding. if a key has a choice of values, intellisense will show all optional values
+
 ### Controls
 `ctrl` or `controls`<br>
 Will build out the controls code block. more properties can be added once you tab through the base properties.
@@ -24,6 +28,54 @@ table.insert(ctrls, {
     Name = "",
     Count = 1,
     ControlType = "Button | Indicator | Knob | Text",
+    UserPIn = true | false,
+    PinStyle = "Input | Output | Both | None"
+  })
+```
+
+### Button Controls
+`ctrls.Button` or `controls.Button`<br>
+Will build out the controls code block with specific button properties
+```
+table.insert(ctrls, {
+    Name = "",
+    Count = 1,
+    ControlType = "Button",
+    ButtonType = "Momentary | Toggle |Trigger | On | Off | Custom | StateTrigger"
+    UserPIn = true | false,
+    PinStyle = "Input | Output | Both | None"
+  })
+```
+
+### Knob Controls
+`ctrls.Knob` or `controls.Knob`<br>
+Will build out the controls code block with specific Knob properties
+```
+table.insert(ctrls, {
+    Name = "",
+    Count = 1,
+    ControlType = "Knob",
+    ControlType = "dB | Hz | Float | Integer | Pan | Percent | Position | Seconds",
+    Max = number,
+    Min = number,
+    Value = number,
+    UserPIn = true | false,
+    PinStyle = "Input | Output | Both | None"
+  })
+```
+
+### Indicator Controls
+`ctrls.Indicator` or `controls.Indicator`<br>
+Will build out the controls code block with specific Indicator properties
+```
+table.insert(ctrls, {
+    Name = "",
+    Count = 1,
+    ControlType = "Indicator",
+    IndicatorType = "LED | Meter | Text | Status",
+    Max = Integer,
+    Min = Integer,
+    Value = Integer,
     UserPIn = true | false,
     PinStyle = "Input | Output | Both | None"
   })
@@ -146,6 +198,13 @@ table.insert(graphics, {
 
    - Removing tab indent for Layout
    - Fixing formatting for ButtonStyle
+</details>
+
+<details>
+ <summary><b>Version 1.3.0</b></summary>
+
+   - Adding more detailed control snipits
+    - ctrl.Button, ctrl.Indicator, ctrl.Knob
 </details>
 
 ## Contributing

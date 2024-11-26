@@ -11,6 +11,48 @@
             "})"
         ]
     },
+    "Auto Populate Button Controls": {
+        "prefix": "ctrls.Button, controls.Button",
+        "body": [
+            "table.insert(ctrls, {",
+            "\tName = \"$1\",",
+            "\tCount = ${2:1},",
+            "\tControlType = \"Button\",",
+            "\tButtonType = \"${3|Momentary,Toggle,Trigger,On,Off,Custom,StateTrigger|}\",",
+            "\tUserPin = ${4|true,false|},",
+            "\tPinStyle = \"${5|Input,Output,Both,None|}\",$0",
+            "})"
+        ]
+    },
+    "Auto Populate Knob Controls": {
+        "prefix": "ctrls.Knob, controls.Knob",
+        "body": [
+            "table.insert(ctrls, {",
+            "\tName = \"$1\",",
+            "\tCount = ${2:1},",
+            "\tControlType = \"Knob\",",
+            "\tControlUnit = \"${3|dB,Hz,Float,Integer,Pan,Percent,Position,Seconds|}\",",
+            "\tMax = $4,",
+            "\tMin = $5,",
+            "\tValue = $6,",
+            "\tUserPin = ${7|true,false|},",
+            "\tPinStyle = \"${8|Input,Output,Both,None|}\",$0",
+            "})"
+        ]
+    },
+    "Auto Populate Indicator Controls": {
+        "prefix": "ctrls.Indicator, controls.Indicator",
+        "body": [
+            "table.insert(ctrls, {",
+            "\tName = \"$1\",",
+            "\tCount = ${2:1},",
+            "\tControlType = \"Indicator\",",
+            "\tIndicatorType = \"${3|LED,Meter,Text,Status|}\",",
+            "\tUserPin = ${4|true,false|},",
+            "\tPinStyle = \"${5|Input,Output,Both,None|}\",$0",
+            "})"
+        ]
+    },
     "Auto Populate Component": {
         "prefix": "component, components",
         "body": [
